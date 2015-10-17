@@ -53,8 +53,8 @@ setup(
     description='Reliable Asynchronous Event Transport protocol',
     long_description='Asynchronous transaction based protocol'
                      ' using Ioflo. http://ioflo.com',
-    url='https://github.com/saltstack/raet',
-    download_url='https://github.com/saltstack/raet/archive/master.zip',
+    url='https://github.com/RaetProtocol/raet.git',
+    download_url='https://github.com/RaetProtocol/raet/archive/master.zip',
     author=__author__,
     author_email='info@ioflo.com',
     license=__license__,
