@@ -48,7 +48,7 @@ if sys.version_info < (3, 4): #tuple comparison element by element
     ])
 
 setup(
-    name='raetp',
+    name='raet',
     version=__version__,
     description='Reliable Asynchronous Event Transport protocol',
     long_description='Asynchronous transaction based protocol'
