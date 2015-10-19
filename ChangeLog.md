@@ -2,9 +2,14 @@
 CHANGE LOG
 -------------------
 -----------
-201510XX
+20151018
 ----------
 v0.6.5
+
+Fixed to work with python 3.5 withoug simplejson. Removed encoding parameter.
+Fixed up unittests
+Add local test runners for sub section tests to run part of unit tests
+Added requirement of simpljson for python2.6 for object pairs hook
 
 
 
