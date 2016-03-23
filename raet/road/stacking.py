@@ -63,7 +63,7 @@ class RoadStack(stacking.KeepStack):
         The local estate id, if None is specified a default will be assigned
     ha
         The local estate host address, this is a tuple of (network_addr, port) that will
-        be bound to by the stack
+        be bound to by the stack for accepting incoming packets
     bufcnt
         The number of messages to buffer, defaults to 2
     auto
@@ -165,7 +165,7 @@ class RoadStack(stacking.KeepStack):
     @property
     def ha(self):
         '''
-        property that returns host address
+        property that returns host address for accepting packets (listening ha)
         '''
         return self.aha
 
