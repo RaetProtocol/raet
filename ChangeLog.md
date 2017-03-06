@@ -7,6 +7,7 @@ CHANGE LOG
 v0.6.7
 
 Fixed some test race timing conditions on new computer with python3.6
+Fixed typo in stacking.py bug
 
 
 -----------
