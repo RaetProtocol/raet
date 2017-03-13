@@ -6,6 +6,7 @@ CHANGE LOG
 ----------
 v0.6.7
 
+Fixed tabs to spaces
 Added newRemote wrapper method aroung RemoteEstate() to allow for custom validation
   of arguments  when creating a new remote
 Fixed some test race timing conditions on faster computer with python3.6
