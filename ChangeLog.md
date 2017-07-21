@@ -2,12 +2,12 @@
 CHANGE LOG
 -------------------
 -----------
-201703XX
+20170721
 ----------
 v0.6.8
 
-
-
+Added .veritive flag to RoadStack to enable better control of accepting signed
+packets
 
 
 
