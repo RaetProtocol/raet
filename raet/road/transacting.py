@@ -3163,9 +3163,9 @@ class Messengent(Correspondent):
         Send resend request(s) for missing packets
         '''
         while misseds:
-            if len(misseds) > 64:
-                remainders = misseds[64:] # only do at most 64 at a time
-                misseds = misseds[:64]
+            if len(misseds) > raeting.MAX_MISSEDS_RESEND:  # was 64
+                remainders = misseds[raeting.MAX_MISSEDS_RESEND:] # only do at most 64 at a time
+                misseds = misseds[:raeting.MAX_MISSEDS_RESEND]
             else:
                 remainders = []
 
