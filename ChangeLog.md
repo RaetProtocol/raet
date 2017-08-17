@@ -8,7 +8,10 @@ CHANGE LOG
 ----------
 v0.6.9
 
+Added MAX_MISSEDS_RESEND = min((UDP_MAX_PACKET_SIZE - MAX_HEAD_SIZE - 110) // 6, 64
+for max number of misseds in Messengent.resend packet instead of just 64
 
+Add codesponsor
 
 
 -----------
