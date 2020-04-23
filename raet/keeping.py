@@ -127,7 +127,7 @@ class Keep(object):
                 raise raeting.KeepError("Invalid filepath ext '{0}' "
                             "needs msgpack installed".format(filepath))
             with ocfn(filepath, "w+b", binary=True) as f:
-                msgpack.dump(data, f, encoding='utf-8')
+                msgpack.dump(data, f)
                 f.flush()
                 os.fsync(f.fileno())
         else:
@@ -154,7 +154,7 @@ class Keep(object):
                     raise raeting.KeepError("Invalid filepath ext '{0}' "
                                 "needs msgpack installed".format(filepath))
                 with ocfn(filepath, "rb", binary=True) as f:
-                    it = msgpack.load(f, object_pairs_hook=odict, encoding='utf-8')
+                    it = msgpack.load(f, object_pairs_hook=odict)
             else:
                 it = None
         except EOFError:

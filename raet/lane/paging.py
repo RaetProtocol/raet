@@ -162,8 +162,7 @@ class TxBody(Body):
                 if not msgpack:
                     emsg = "Msgpack not installed."
                     raise raeting.PacketError(emsg)
-                self.packed = msgpack.dumps(self.data,
-                                            encoding='utf-8')
+                self.packed = msgpack.dumps(self.data)
         else:
             emsg = "Unrecognized message pack kind '{0}'\n".format(pk)
             console.terse(emsg)
@@ -192,7 +191,7 @@ class RxBody(Body):
 
         if pk == PackKind.json:
             if self.packed:
-                self.data = json.loads(self.packed.decode(encoding='utf-8'),
+                self.data = json.loads(self.packed.decode(),
                                        object_pairs_hook=odict)
         elif pk == PackKind.pack:
             if self.packed:
@@ -200,8 +199,7 @@ class RxBody(Body):
                     emsg = "Msgpack not installed."
                     raise raeting.PacketError(emsg)
                 self.data = msgpack.loads(self.packed,
-                                          object_pairs_hook=odict,
-                                          encoding='utf-8')
+                                          object_pairs_hook=odict)
 
         if not isinstance(self.data, Mapping):
             emsg = "Message body not a mapping\n"
